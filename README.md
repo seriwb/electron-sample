@@ -1,33 +1,11 @@
 # electron-sample
 
-Electronのサンプル
+Electronのサンプル置き場。  
+各ディレクトリごとでアプリケーションとして動作するように作成する。
 
+## Electronではじめるアプリ開発
 
-## 環境
+[Electronではじめるアプリ開発](http://gihyo.jp/book/2017/978-4-7741-8819-5)を読みながら書いたサンプル
 
-- node.js v8.1.2
-- electron 1.6.11
-
-
-## 実行コマンド
-
-```
-# 開発準備
-npm install electron --save-dev
-# 動作確認
-./node_modules/.bin/electron
-# アプリ実行
-node_modules/.bin/electron .
-```
-
-# 技術メモ
-
-
-
-# 参考
-
-- https://www.chromium.org/developers/design-documents/multi-process-architecture
-- https://www.chromium.org/developers/design-documents/inter-process-communication
-- https://kangax.github.io/campat-table/es6/
-- http://electron.atom.io/docs/api/app/
-- 
+- [formがあるアプリ](./form)
+- [チャットアプリ](./chat)
