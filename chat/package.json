@@ -4,6 +4,7 @@
   "description": "sample chat application",
   "main": ".tmp/main/index.js",
   "scripts": {
+    "build": "babel --out-dir .tmp src",
     "watch": "babel --watch --out-dir .tmp src",
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
