@@ -1,1 +1,3 @@
 /node_modules
+/.tmp
+/src/renderer/firebase/config.js.org

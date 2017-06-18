@@ -11,6 +11,7 @@
 - babel-cli@6.24.1
 - babel-preset-es2016@6.24.1
 - babel-preset-react@6.24.1
+- firebase@4.1.2
 
 
 ## コマンド
@@ -26,6 +27,9 @@ npm install babel-cli babel-preset-es2015 babel-preset-react --save-dev
 
 npm run start    # npm start
 npm run watch
+npm run build && npm start
+
+npm install firebase --save
 ```
 
 # 技術メモ
@@ -33,12 +37,15 @@ npm run watch
 - PhotonKit
   - CSSフレームワーク。macOSネイティブアプリのようなUIを実現できる
   - http://photonkit.com/
-
 - 最初ES2016を使ってみたが、上手くトランスパイルされなかったのでES2015に変更した。
 - npmスクリプトには、prestartのようなpre+スクリプト名で事前タスクを登録することができる。
 - react-routerの4.1.1だと過去のバグが再発しているので3系に戻した。
   - https://github.com/acdlite/redux-router/issues/281
 - ElectronだとHTML上でrequireが使える（Nodeインテグレーション）
+- preventDefaultでデフォルトアクションの抑制ができる
+- inputのtypeにemailを選択すると、emailの形式になっていないとsubmitが成功しない
+
+
 
 ## メニュー要素の指定項目
 
@@ -60,7 +67,7 @@ npm run watch
 ## 指定可能なrole一覧
 
 | role | 意味 |
-| :---- | : ---- |
+| :---- | :---- |
 | undo | テキスト入力のやり直し |
 | redo | undoの取り消し |
 | cut | 選択したテキストの切り取り |
@@ -73,6 +80,7 @@ npm run watch
 | close | 現在のウィンドウを閉じる |
 | quit | アプリケーションを終了する |
 | togglefullscreen | フルスクリーン表示を切り替える |
+
 
 ### macOS限定のrole
 
@@ -87,3 +95,12 @@ npm run watch
 | window | このアプリケーションのウィンドウを切り替える機能をメニューに追加する |
 | help | メニューの検索ボックスを追加する |
 | services | サービスメニューを追加する |
+
+
+# Firebase
+
+- https://console.firebase.google.com/
+- Authenticationのログイン方法で「メール / パスワード」を有効にする
+- ホームの「ウェブアプリにFirebaseを追加」で接続情報のscriptタグ内をコピーし、app.jsxに追加
+
+

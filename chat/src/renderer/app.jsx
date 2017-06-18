@@ -6,6 +6,12 @@ import Signup from "./Signup";
 import Rooms from "./Rooms";
 import Room from "./Room";
 
+import { firebaseConfig } from './firebase/config';
+import * as firebase from "firebase";
+
+// Firebaseの初期化
+firebase.initializeApp(firebaseConfig);
+
 // Routingの定義
 const appRouting = (
   <Router history={hashHistory}>
@@ -13,7 +19,7 @@ const appRouting = (
       <Route path="login" component={Login} />
       <Route path="signup" component={Signup} />
       <Route path="rooms" component={Rooms}>
-        <Route path="room" component={Room} />
+        <Route path=":roomId" component={Room} />
       </Route>
     </Route>
   </Router>
