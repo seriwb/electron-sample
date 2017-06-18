@@ -44,7 +44,7 @@ npm install firebase --save
 - ElectronだとHTML上でrequireが使える（Nodeインテグレーション）
 - preventDefaultでデフォルトアクションの抑制ができる
 - inputのtypeにemailを選択すると、emailの形式になっていないとsubmitが成功しない
-
+- componentDidMountは、ReactコンポーネントがDOMツリーにマウントされるタイミングで一度だけ呼び出される処理
 
 
 ## メニュー要素の指定項目
@@ -102,5 +102,6 @@ npm install firebase --save
 - https://console.firebase.google.com/
 - Authenticationのログイン方法で「メール / パスワード」を有効にする
 - ホームの「ウェブアプリにFirebaseを追加」で接続情報のscriptタグ内をコピーし、app.jsxに追加
-
+- Firebaseデータベースの機能
+  - https://firebase.google.com/docs/reference/js/firebase.database.Query
 
