@@ -85,7 +85,7 @@ export default class Rooms extends React.Component {
       <div className="list-group">
         { rooms.map(r => <RoomItem room={r} key={r.key} selected={r.key === roomId} />) }
         <div className="list-group-header">
-          <form style={FORM_STYLE} onsubmit={this.handleOnSubmit}>
+          <form style={FORM_STYLE} onSubmit={this.handleOnSubmit}>
             <input
               type="text"
               className="form-control"
